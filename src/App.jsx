@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen"> {/* purey viewPort mein content dekhne ke liye*/}
       <Navbar />
       <Hero />
       <Features />

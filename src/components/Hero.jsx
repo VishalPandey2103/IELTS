@@ -15,6 +15,7 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in-up relative z-10">
             <div className="flex items-center space-x-2">
               <div className="flex text-gradient">
+                {/* I wanted to append 5 star So created an array with undefined items of size 5 */}
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 fill-current text-yellow-400" />
                 ))}
@@ -66,7 +67,7 @@ const Hero = () => {
               <img 
                 src="https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=600" 
                 alt="IELTS Students Learning"
-                className="w-full h-96 object-cover"
+                className="w-full h-96 object-cover center-top"
               />
               <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Interactive Learning</h3>

@@ -1,6 +1,6 @@
 # IELTS Pro Institute Homepage
 
-A modern, responsive homepage for a fictional IELTS Institute built with React, TypeScript, and Tailwind CSS.
+A modern, responsive homepage for a fictional IELTS Institute built with React, JavaScript, and Tailwind CSS.
 
 ## Features
 
@@ -29,7 +29,7 @@ A modern, responsive homepage for a fictional IELTS Institute built with React, 
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd ielts-institute-homepage
+cd IELTS
 ```
 
 2. Install dependencies:
@@ -42,7 +42,7 @@ npm install
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+4. Open your browser and navigate to `http://localhost:5173` (or the port shown in terminal)
 
 ### Build for Production
 
@@ -51,6 +51,16 @@ npm run build
 ```
 
 The build files will be generated in the `dist` directory.
+
+### Available Scripts
+
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run preview  # Preview production build  
+npm run lint     # Check code quality
+```
+
 
 ## Design Choices
 
@@ -79,7 +89,7 @@ The build files will be generated in the `dist` directory.
 ### Components Architecture
 - **Modular Design**: Each section is a separate component
 - **Reusable Elements**: Common UI patterns extracted into components
-- **TypeScript**: Full type safety throughout the application
+- **JavaScript**: Modern ES6+ JavaScript with clean, readable code
 - **Clean Code**: Well-structured, commented, and maintainable
 
 ### Performance Optimizations
@@ -91,24 +101,7 @@ The build files will be generated in the `dist` directory.
 ## Technologies Used
 
 - **React 18**: Modern React with hooks and functional components
-- **TypeScript**: Type safety and better development experience
+- **JavaScript (ES6+)**: Clean, modern JavaScript syntax
 - **Tailwind CSS**: Utility-first CSS framework for rapid styling
 - **Lucide React**: Beautiful, customizable icons
 - **Vite**: Fast build tool and development server
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Future Enhancements
-
-- Add dark mode toggle
-- Implement course catalog with filtering
-- Add online booking system
-- Integrate payment gateway
-- Add multi-language support
-- Implement user dashboard

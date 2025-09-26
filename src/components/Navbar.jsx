@@ -1,23 +1,30 @@
 import React, { useState } from 'react';
+// Importing icons from lucide-react library
 import { Menu, X, BookOpen } from 'lucide-react';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // initially assuming site is running on desktop
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <nav className="bg-white/95 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-purple-100">
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <div className="flex justify-between h-16">
+
+          {/* Logo Container -> Book Icon + Text */}
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
               <BookOpen className="h-8 w-8 text-gradient bg-gradient-to-r from-purple-600 to-pink-600 mr-2" />
-              <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">IELTS Pro</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">IELTS INSTITUTE</span>
             </div>
           </div>
-          
-          {/* Desktop Menu */}
+
+          {/* Content to show when the site is running on desktop */}
+          {/* will be hidden when display size less that 768px(md:768px) */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium">Home</a>
             <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium">Courses</a>
@@ -30,9 +37,10 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
+          {/* md:hidden hides the element on medium and larger screens ... thus Responsive is Controlled */}
           <div className="md:hidden flex items-center">
             <button
-              onClick={toggleMenu}
+              onClick={toggleMenu} // Toggle handler to switch between cross and menu icon
               className="text-gray-700 hover:text-purple-600 transition-colors duration-200"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -41,7 +49,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu  Options -> Render when the menu is Open */}
       {isMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-purple-100">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
